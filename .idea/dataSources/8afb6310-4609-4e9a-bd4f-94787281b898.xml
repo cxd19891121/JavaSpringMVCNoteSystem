@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="xiaodong-pg">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.0">
+    <root id="1"/>
+    <database id="2" parent="1" name="daon3851l3c33u">
+      <ObjectId>1235445</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <schema id="3" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2017-02-16.21:49:19.231</IntrospectionTimestamp>
+      <IntrospectionStateNumber>14251730</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="4" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="5" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="6" parent="2" name="pg_temp_1">
+      <ObjectId>11848</ObjectId>
+    </schema>
+    <schema id="7" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11849</ObjectId>
+    </schema>
+    <schema id="8" parent="2" name="information_schema">
+      <ObjectId>13003</ObjectId>
+    </schema>
+    <sequence id="9" parent="3" name="cxd_note_note_id_seq">
+      <ObjectId>1698372</ObjectId>
+      <StateNumber>14251626</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <sequence id="10" parent="3" name="cxd_user_id_seq">
+      <ObjectId>1643328</ObjectId>
+      <StateNumber>14183250</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <sequence id="11" parent="3" name="hibernate_sequence">
+      <ObjectId>1644802</ObjectId>
+      <StateNumber>14194937</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <table id="12" parent="3" name="cxd_note">
+      <ObjectId>1698374</ObjectId>
+      <StateNumber>14251730</StateNumber>
+    </table>
+    <table id="13" parent="3" name="cxd_user">
+      <ObjectId>1643330</ObjectId>
+      <Comment>general users</Comment>
+      <StateNumber>14251626</StateNumber>
+    </table>
+    <table id="14" parent="3" name="ticks">
+      <ObjectId>1270101</ObjectId>
+      <StateNumber>13649240</StateNumber>
+    </table>
+    <column id="15" parent="12" name="note_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>14251626</StateNumber>
+      <DefaultExpression>nextval(&apos;cxd_note_note_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="16" parent="12" name="user_id">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>14251626</StateNumber>
+    </column>
+    <column id="17" parent="12" name="note_content">
+      <Position>3</Position>
+      <DataType>text|0</DataType>
+      <StateNumber>14251626</StateNumber>
+    </column>
+    <column id="18" parent="12" name="note_time">
+      <Position>4</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>14251626</StateNumber>
+    </column>
+    <column id="19" parent="12" name="note_type">
+      <Position>5</Position>
+      <DataType>text|0</DataType>
+      <StateNumber>14251730</StateNumber>
+    </column>
+    <index id="20" parent="12" name="cxd_note_note_id_uindex">
+      <ObjectId>1698386</ObjectId>
+      <ColNames>note_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <foreign-key id="21" parent="12" name="cxd_note_cxd_user_id_fk">
+      <ObjectId>1698381</ObjectId>
+      <ColNames>user_id</ColNames>
+      <RefTableName>cxd_user</RefTableName>
+      <RefKeyName>cxd_user_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="22" parent="13" name="username">
+      <Position>1</Position>
+      <DataType>text|0</DataType>
+      <StateNumber>14183250</StateNumber>
+    </column>
+    <column id="23" parent="13" name="id">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>14183250</StateNumber>
+      <DefaultExpression>nextval(&apos;cxd_user_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="24" parent="13" name="password">
+      <Position>3</Position>
+      <DataType>text|0</DataType>
+      <StateNumber>14183250</StateNumber>
+    </column>
+    <column id="25" parent="13" name="email">
+      <Position>4</Position>
+      <DataType>text|0</DataType>
+      <StateNumber>14183250</StateNumber>
+    </column>
+    <index id="26" parent="13" name="cxd_user_pkey">
+      <ObjectId>1643337</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="27" parent="13" name="cxd_user_pkey">
+      <ObjectId>1643338</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>cxd_user_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="28" parent="14" name="tick">
+      <Position>1</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>13649240</StateNumber>
+    </column>
+  </database-model>
+</dataSource>

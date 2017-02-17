@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.username">
+            moqqptdaswdjgi
+        </property>
+
+        <property name="hibernate.connection.password">
+            266d27ccc2b03cd33b34df38d9d6f400961c6f27c211b33f1d16fa107d21bbef
+        </property>
+
+        <property name="hibernate.connection.url">
+            jdbc:postgresql://ec2-54-235-112-37.compute-1.amazonaws.com:5432/daon3851l3c33u?ssl=true&amp;sslfactory=org.postgresql.ssl.NonValidatingFactory
+        </property>
+
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL9Dialect</property>
+        <property name="hibernate.connection.verifyServerCertificate">false</property>
+        <property name="hibernate.connection.requireSSL">true</property>
+
+
+        <property name="hibernate.current_session_context_class">thread</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hbm2ddl.auto">update</property>
+        <property name="hibernate.archive.autodetection">class</property>
+        <property name="hibernate.format_sql" >true</property>
+
+        <!--ssl:true,  sslFactory:org.postgresql.ssl.NonValidatingFactory-->
+        <mapping class ="com.xiaodong.po.User"/>
+        <mapping class = "com.xiaodong.po.Note"></mapping>
+    </session-factory>
+</hibernate-configuration>
+
