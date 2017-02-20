@@ -14,6 +14,7 @@ import java.util.List;
  * Created by xiaodong chen on 2/16/2017.
  */
 
+@CrossOrigin (origins = "*")
 @Controller
 public class NoteController {
 
